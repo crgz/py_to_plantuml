@@ -1,3 +1,6 @@
+
+<img src="https://user-images.githubusercontent.com/5125929/166006937-ce554b54-bc54-433e-96b6-735114619bd3.svg" width="50%" align="right" style="border:20px solid white">
+
 # py_to_plantuml
 
 Creates UML class diagrams from Python pylint's pyreverse generated .dot files.
