@@ -1,6 +1,6 @@
 name(py_to_plantuml).
 title('Creates UML class diagrams from Python pylint\'s pyreverse generated .dot files.').
-version('0.0.0').
+version('0.0.1').
 
 author('Conrado M. Rodriguez','conrado.rgz@gmail.com').
 maintainer('Conrado M. Rodriguez','conrado.rgz@gmail.com').
