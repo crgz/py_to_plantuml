@@ -1,0 +1,26 @@
+#!/usr/bin/env swipl
+/*
+* Author: Conrado M. Rodriguez <Conrado.Rgz@gmail.com> https://github.com/crgz
+*/
+:- use_module(py_to_plantuml).
+:- initialization(start). % Debugger entry point. See ./vscode/launch.json
+
+start :-
+   resolve_arguments(Arguments),
+   expand_arguments(Arguments, NestedList),
+   flatten(NestedList, FlatList),
+   list_to_set(FlatList, Files),
+   format('Found: ~q~n', [Files]),
+   digraph_to_plantuml(Files),
+   halt.
+start :- halt(1).
+
+resolve_arguments(Arguments):-
+   current_prolog_flag(argv, Arguments),
+   member(_, Arguments).
+resolve_arguments(['*.dot']).
+
+expand_arguments([], []).
+expand_arguments([Head|Tail], [Filename|Filenames]) :- 
+   expand_file_name(Head, Filename), 
+   expand_arguments(Tail, Filenames).

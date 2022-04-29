@@ -1,0 +1,6 @@
+@startuml classes_cc_0
+Local  <|--  Display
+Local  *--  DisplayFactory
+Recordable  <|--  Display
+Recordable  *--  DisplayFactory
+@enduml

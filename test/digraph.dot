@@ -1,0 +1,13 @@
+digraph classes_cc_0 {
+ graph [charset="utf-8",rankdir=BT];
+ "Display" [label=Display,shape=record];
+ "DisplayFactory" [label=DisplayFactory,shape=record];
+ "Local" [label=Local,shape=record];
+ "Recordable"  [label=Recordable,shape=record];
+
+ "Local" -> "Display" [arrowhead=empty,arrowtail=none];
+ "Local" -> "DisplayFactory" [arrowhead=diamond,style=solid];
+
+ "Recordable" -> "Display" [arrowhead=empty,arrowtail=none];
+ "Recordable" -> "DisplayFactory" [arrowhead=diamond,style=solid];
+}
