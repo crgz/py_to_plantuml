@@ -25,7 +25,7 @@ Only for development purposes the [`tap` pack](http://www.swi-prolog.org/pack/li
 ## Provided Predicates
 
 ```prolog
-parse/4.  % parse an abbreviated incomplete date in multiple languages (today, tomorrow, etc).
+digraph_to_plantuml/1.  % Creates UML class diagrams from Python pylint's pyreverse generated .dot files.
 ```
 
 For further details have a look at the [implementation](prolog/py_to_plantuml.pl). In addition, the [defined
